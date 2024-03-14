@@ -49,6 +49,10 @@ public class Client {
 
     //#endregion
 
+    public String getDetails(){
+
+        return this.getName() + this.getPhoneNumber();
+    }
 
     @Override
     public String toString() {

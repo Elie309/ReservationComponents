@@ -4,10 +4,7 @@ import com.elie309.reservation.models.Client;
 import com.elie309.reservation.models.Reservation;
 import com.elie309.reservation.models.Status;
 import javafx.application.Application;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.time.LocalDateTime;
@@ -26,11 +23,10 @@ public class Main extends Application {
     public void start(Stage stage) {
 
         ArrayList<String> outdoorActivities = new ArrayList<>(Arrays.asList(
-                "Hiking", "Camping", "Cycling", "Fishing", "Kayaking",
-                "Rock climbing", "Picnicking", "Birdwatching", "Horseback riding", "Geocaching"
+                "Hiking", "Camping", "Cycling", "Fishing", "Kayaking"
         ));
 
-        ReservationPanel reservationPanel = new ReservationPanel(outdoorActivities);
+        ReservationGrid reservationPanel = new ReservationGrid(outdoorActivities);
 
         Scene scene = new Scene(reservationPanel, WIDTH, HEIGHT);
 
